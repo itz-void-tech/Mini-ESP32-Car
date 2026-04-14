@@ -1,40 +1,58 @@
-# 🤖 Robo-Eyes: Expressive OLED Emotion Engine
+# 🏎️ ESP32-S3 Spy Car: Integrated Autonomous System (V3.0)
 
-An interactive animation system for robots that brings character to life using an ESP32 and an SSD1306 OLED display. This project features a real-time web dashboard to toggle between different emotional states.
+A high-intelligence robotics platform that merges **Inertial Telemetry**, **ToF Laser Scanning**, and **Human-Robot Interaction (HRI)**. This system transforms an ESP32-S3 into a mobile command unit capable of autonomous safety and emotional expression.
 
 ## 🛠️ Tech Stack
 ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![ESP32](https://img.shields.io/badge/ESP32-S3-E7352C?style=for-the-badge&logo=espressif&logoColor=white)
-![OLED](https://img.shields.io/badge/Display-SSD1306_I2C-blue?style=for-the-badge)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![I2C](https://img.shields.io/badge/Protocol-I2C-F7DF1E?style=for-the-badge)
+![Power](https://img.shields.io/badge/Battery-2S_LiPo_BMS-green?style=for-the-badge)
 
 ---
 
-## 📸 Animation Gallery
+## 📸 System Overview
 
-| 3d Printed Car Chassis | UI Control Panel |
+| Full Model Assembly | Integrated Web Dashboard |
 | :---: | :---: |
-| ![Car Chassis](./images/eyes_angry.png) | ![Control Panel](./images/eyes_web_ui.png) |
-| *3d printed mini car with custom soldered pcb* | *Dark-themed mobile control grid* |
+| ![Spy Car Full Assembly](./images/car_final.jpg) | ![Advanced Telemetry Dashboard](./images/dashboard_final.png) |
+| *N20-powered chassis with ToF Laser & OLED Eyes* | *Real-time GPS Map, Compass, & Emotion Control* |
 
 ---
 
-## ✨ Features
-* **Procedural Eye Darting:** In Neutral and Happy modes, the eyes "look around" randomly to simulate curiosity and life.
-* **Complex Masking:** Uses geometric primitives (triangles and roundrects) to create realistic expressions like "Angry," "Sad," and "Happy" without high-memory bitmaps.
-* **Emotion Persistence:** Once an emotion is selected via the web interface, it remains active indefinitely until the next command is received.
-* **Specialized Animations:** * **Crying:** Animated teardrop particles moving down the Y-axis.
-    * **Winking:** Asymmetrical blinking logic where only the right eye closes.
-    * **Love:** Heart-shaped eyes drawn using geometric circle/triangle composition.
+## 🚀 Key Features
 
-## ⚙️ Logic Breakdown
-The animation engine uses a **Non-Blocking Timer Pattern** to handle multiple events simultaneously:
-1. **Blink Timer:** Triggers physiological blinks at varied intervals based on current mood (e.g., surprised eyes blink faster).
-2. **Idle Timer:** Controls the `lookOffsetX/Y` variables for pupil movement.
-3. **Particle Timer:** Manages the `tearDropY` position for the crying effect.
+### 📡 1. Advanced Telemetry & Navigation
+* **GPS Real-Time Tracking:** Live coordinate mapping and speed calculation (km/h) via NEO-6M.
+* **Dual-Sensor Compass:** Reactive SVG HUD based on QMC5883L/HMC5883L magnetic heading.
+* **IMU Data Streaming:** MPU6050 6-axis telemetry (Accel/Gyro) with EMA filtering for stability.
 
-## 🌐 Web Interface
-The ESP32 acts as a **Soft Access Point** (`RoboEyes_ESP32`). Simply connect and navigate to the IP address to access the touch-optimized control grid.
+### ⚡ 2. LiDAR & Autonomous Safety
+* **ToF Laser Scanning:** VL53L0X Time-of-Flight sensor for millimetric obstacle detection.
+* **Self-Healing Logic:** Automated I2C bus recovery for mission-critical reliability.
+* **Safety Protocols:** Automatic crash detection, tilt/fall protection, and obstacle repulsion.
+
+### 🎭 3. OLED Emotion Engine (HRI)
+* **9 Emotional States:** Neutral, Happy, Sad, Angry, Sleepy, Surprised, Crying, Wink, and Love.
+* **Procedural Animation:** Randomized eye-darting and physiological blinking for a "lifelike" feel.
+* **Persistent State:** Emotions hold indefinitely until changed via the remote command center.
+
+### 🔋 4. Power & Drive
+* **High-Efficiency Drive:** TB6612FNG driver controlling high-torque N20 Micro Gear Motors.
+* **Custom Power Cell:** Powered by a self-made **2S LiPo battery** with a 7.4V BMS.
+
+---
+
+## ⚙️ Hardware Components
+* **Core:** ESP32-S3 (Dual-Core, WiFi/BT)
+* **Displays:** 0.96" SSD1306 OLED (I2C)
+* **Sensors:** VL53L0X (Laser), MPU6050 (IMU), HMC5883L (Mag), NEO-6M (GPS)
+* **Mechanical:** 2x N20 Motors, MG90S Pan/Tilt Servos
+* **Power:** Custom 2S LiPo Pack with BMS
+
+## 🌐 Mission Control
+Connect to the WiFi AP `SPY_CAR_DIAG` to access the unified dashboard. This interface allows for simultaneous motor control, camera pan/tilt, GPS observation, and emotional state selection.
 
 ---
 **Developed by:** Swarnendu Kundu  
-*Advancing Robotics through Human-Centered Design*
+*Robotics, Embedded Systems, & Full-Stack IoT*
