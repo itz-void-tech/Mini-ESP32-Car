@@ -1,6 +1,6 @@
 # 🏎️ ESP32-S3 Spy Car: Integrated Autonomous System (V3.0)
 
-A high-intelligence robotics platform that merges **Inertial Telemetry**, **ToF Laser Scanning**, and **Human-Robot Interaction (HRI)**. This system transforms an ESP32-S3 into a mobile command unit capable of autonomous safety and emotional expression.
+A high-intelligence robotics platform that merges **Inertial Telemetry**, **ToF Laser Scanning**, and **Human-Robot Interaction (HRI)**. This system transforms an ESP32 into a mobile command unit capable of autonomous safety and emotional expression.
 
 ## 🛠️ Tech Stack
 ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
@@ -44,7 +44,7 @@ A high-intelligence robotics platform that merges **Inertial Telemetry**, **ToF 
 ---
 
 ## ⚙️ Hardware Components
-* **Core:** ESP32-S3 (Dual-Core, WiFi/BT)
+* **Core:** ESP32 
 * **Displays:** 0.96" SSD1306 OLED (I2C)
 * **Sensors:** VL53L0X (Laser), MPU6050 (IMU), HMC5883L (Mag), NEO-6M (GPS)
 * **Mechanical:** 2x N20 Motors, MG90S Pan/Tilt Servos
