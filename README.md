@@ -15,7 +15,7 @@ A high-intelligence robotics platform that merges **Inertial Telemetry**, **ToF 
 
 | Full Model Assembly | Integrated Web Dashboard |
 | :---: | :---: |
-| ![Spy Car Full Assembly](./images/car_final.jpg) | ![Advanced Telemetry Dashboard](./images/dashboard_final.png) |
+| ![Spy Car Full Assembly](./images/car.png) | ![Advanced Telemetry Dashboard](./images/website.png) |
 | *N20-powered chassis with ToF Laser & OLED Eyes* | *Real-time GPS Map, Compass, & Emotion Control* |
 
 ---
