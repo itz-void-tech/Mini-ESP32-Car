@@ -1,4 +1,4 @@
-# 🏎️ ESP32-S3 Spy Car: Integrated Autonomous System (V3.0)
+# 🏎️ ESP32 Spy Car: Integrated Autonomous System (V3.0)
 
 A high-intelligence robotics platform that merges **Inertial Telemetry**, **ToF Laser Scanning**, and **Human-Robot Interaction (HRI)**. This system transforms an ESP32 into a mobile command unit capable of autonomous safety and emotional expression.
 
